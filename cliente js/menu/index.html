@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script type="module" src="menuBuilder.js"></script>
+<script type="module" src="menu-config.js"></script>
+<script type="module">
+    // Create an instance of MenuBuilder
+    const menuBuilder = new MenuBuilder();
+
+    // Add items to the menu
+    menuBuilder.addItem({
+        name: 'Profile',
+        link: '#',
+        subcategoryItems: [
+            { name: 'Posts', link: '#' },
+            { name: 'Images', link: '#' }
+        ]
+    });
+
+    menuBuilder.addItem({
+        name: 'Messages',
+        link: '#',
+        subcategoryItems: [
+            { name: 'New', link: '#' },
+            { name: 'Sent', link: '#' }
+        ]
+    });
+
+    menuBuilder.addItem({
+        name: 'Settings',
+        link: '#',
+        subcategoryItems: [
+            { name: 'Password', link: '#' },
+            { name: 'Language', link: '#' }
+        ]
+    });
+
+    // Set the mode based on your configuration
+    MenuConfig.mode = 'vertical'; // or 'horizontal'
+
+    // Build the menu
+    menuBuilder.buildMenu();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+*{
+    color: #ffffff;
+    text-decoration: none;
+}
+.navbar>li{
+    float:left;
+    background-color: #6495ed;
+}
+.navbar li a{
+    background-color:#6495ed;
+    display:block;
+    border: 2px solid;
+    padding: 10px 10px;
+}
+.navbar li a:hover{
+    background-color:grey;
+}
+.navbar li ul{
+    display:none;
+    position: absolute;
+    min-width: 150px;
+}
+.navbar li:hover>ul{
+    display:block;
+}
+.navbar li ul li{
+    position: relative;
+}
+.navbar li ul li ul{
+    right: -150px;
+    top:0;
+}
